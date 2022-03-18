@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import EditIcon from "@mui/icons-material/Edit";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { Table } from "react-bootstrap";
 
 export const Users = () => {
   const [users, setUsers] = useState([]);
@@ -17,7 +18,7 @@ export const Users = () => {
   return (
     <div className="container">
       <h1 className="d-flex justify-content-center">User</h1>
-      <table className="table table-dark table-hover">
+      <Table striped hover variant="dark" responsive size="sm">
         <thead>
           <tr className="text-center">
             <th scope="col">ID</th>
@@ -40,7 +41,7 @@ export const Users = () => {
               <td>
                 {/*create a link to buttons */}
                 <Link to={`/edit/${e.id}`}>
-                  <IconButton color="warning" aria-label="Edit">
+                  <IconButton color="primary" aria-label="Edit">
                     <EditIcon />
                   </IconButton>
                 </Link>
@@ -59,7 +60,7 @@ export const Users = () => {
             </tr>
           ))}
         </tbody>
-      </table>
+      </Table>
     </div>
   );
 };

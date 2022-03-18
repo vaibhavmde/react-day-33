@@ -4,6 +4,7 @@ import { AddUser } from "./Components/Adduser";
 import { Edit } from "./Components/Edit";
 import { Navbar } from "./Components/Navbar";
 import { Users } from "./Components/Users";
+import "./App.css";
 
 export default function App() {
   return (
