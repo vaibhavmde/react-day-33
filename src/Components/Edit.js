@@ -7,14 +7,13 @@ import axios from "axios";
 
 export const Edit = () => {
   const [user, setUser] = useState({
-    id: "",
     Firstname: "",
     Lastname: "",
     EmpID: "",
     City: ""
   });
 
-  const { id, Firstname, Lastname, EmpID, City } = user;
+  const { Firstname, Lastname, EmpID, City } = user;
 
   const { u } = useParams();
   let navigate = useNavigate();
@@ -43,7 +42,7 @@ export const Edit = () => {
           navigate("/");
         }}
       >
-        <FormControl>
+        {/* <FormControl>
           <TextField
             id="demo"
             focused
@@ -55,7 +54,7 @@ export const Edit = () => {
           />
         </FormControl>
         <br />
-        <br />
+        <br /> */}
         <FormControl>
           <TextField
             id="demo"

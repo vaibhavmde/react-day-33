@@ -9,14 +9,13 @@ export const AddUser = () => {
   let navigate = useNavigate(); //to navigate to home page
 
   const [user, setUser] = useState({
-    id: "",
     Firstname: "",
     Lastname: "",
     EmpID: "",
     City: ""
   });
 
-  const { id, Firstname, Lastname, EmpID, City } = user;
+  const { Firstname, Lastname, EmpID, City } = user;
 
   const onInput = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -33,7 +32,7 @@ export const AddUser = () => {
           navigate("/");
         }}
       >
-        <FormControl>
+        {/* <FormControl>
           <TextField
             id="demo"
             focused
@@ -45,7 +44,7 @@ export const AddUser = () => {
           />
           <br />
           <br />
-        </FormControl>
+        </FormControl> */}
         <FormControl>
           <TextField
             id="demo"

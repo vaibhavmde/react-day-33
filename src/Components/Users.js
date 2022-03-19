@@ -12,7 +12,7 @@ export const Users = () => {
   useEffect(() => {
     axios
       .get("https://6232374fc5ec1188ad2dacbe.mockapi.io/users")
-      .then((response) => setUsers(response.data));
+      .then((response) => setUsers(response.data.reverse()));
   }, [users]);
 
   return (
