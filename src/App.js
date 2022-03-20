@@ -6,6 +6,7 @@ import { Navbar } from "./Components/Navbar";
 import { Users } from "./Components/Users";
 import "./App.css";
 
+// App Component
 export default function App() {
   return (
     <div>

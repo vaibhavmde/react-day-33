@@ -5,9 +5,11 @@ import FormControl from "@mui/material/FormControl";
 import Button from "@mui/material/Button";
 import axios from "axios";
 
+// AddUser Component
 export const AddUser = () => {
   let navigate = useNavigate(); //to navigate to home page
 
+  //created a state user
   const [user, setUser] = useState({
     Firstname: "",
     Lastname: "",
@@ -15,8 +17,10 @@ export const AddUser = () => {
     City: ""
   });
 
+  //destructuring of Object
   const { Firstname, Lastname, EmpID, City } = user;
 
+  //OnInput function to take values of user
   const onInput = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
@@ -28,23 +32,12 @@ export const AddUser = () => {
         className="d-flex flex-column m-2 "
         onSubmit={(e) => {
           e.preventDefault();
+          //adding the user to API
           axios.post(`https://6232374fc5ec1188ad2dacbe.mockapi.io/users`, user);
+          //Navigating back to Home
           navigate("/");
         }}
       >
-        {/* <FormControl>
-          <TextField
-            id="demo"
-            focused
-            color="primary"
-            name="id"
-            value={id}
-            onChange={(e) => onInput(e)}
-            label="ID"
-          />
-          <br />
-          <br />
-        </FormControl> */}
         <FormControl>
           <TextField
             id="demo"
